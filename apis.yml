@@ -1,23 +1,67 @@
 aid: astra3
+
 name: Astra3
-description: 'Astra3 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Astra3 is a company identified in the API Evangelist secondary-market harvest. It currently exists as a stub entry pending full profiling.
+  No public website or API endpoints have been discovered yet, and the company’s online presence appears minimal or non‑existent. Further investigation
+  may reveal additional details as they become available.
+
 url: https://raw.githubusercontent.com/api-evangelist/astra3/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The API reference page https://astra3.com returns an HTML shell with no machine‑readable OpenAPI spec.
+  evidence:
+  - url: https://astra3.com/openapi.json
+    status: 200
+  checked: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Technology
+- Finance
+- Data
+- Services
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Vendors
+  url: vendors/astra3-vendors.yml
+- type: Hosts
+  url: hosts/astra3-hosts.yml
 - type: Website
   url: https://equityzen.com/company/astra3
+- type: DomainSecurity
+  url: security/astra3-domain-security.yml
+
+apis:
+- name: Astra3 API
+  description: Public API reference discovered at https://astra3.com but no machine‑readable contract was found.
+  humanURL: https://astra3.com
+  baseURL: null
+  aid: astra3:astra3-api
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
